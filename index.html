@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>Elixir - Auf den Schultern eines Giganten</title>
+    <link rel="stylesheet" href="css/reveal.css" />
+    <link rel="stylesheet" href="css/theme/black.css" />
+    <link rel="stylesheet" href="lib/css/zenburn.css" />
+    <script>
+      var link = document.createElement("link");
+      link.rel = "stylesheet";
+      link.type = "text/css";
+      link.href = window.location.search.match(/print-pdf/gi)
+        ? "css/print/pdf.css"
+        : "css/print/paper.css";
+      document.getElementsByTagName("head")[0].appendChild(link);
+    </script>
+  </head>
+
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h1>Elixir</h1>
+          <h2>Auf den Schultern eines Giganten</h2>
+          <p>Meetup SoCraOs 06.03.2018</p>
+        </section>
+        <section>
+          <h2>whoami</h2>
+          <pre><code class="hljs" data-trim contenteditable>
+          {
+            "name": "Henning Löhr",
+            "position": "Backend-Developer",
+            "company": "SALT AND PEPPER - Software Solutions",
+            "blog": "randomoutput.xyz",
+            "github": "github.com/hlhr",
+            "mail": "mail@randomoutput.xyz"
+          }
+				</code></pre>
+        </section>
+        <section>
+          <h2>Elixir</h2>
+          <p>
+            Elixir is a <b>dynamic</b>, <b>functional</b> language designed for
+            building <b>scalable</b> and
+            <b>maintainable</b>
+            applications.
+          </p>
+          <p>
+            Elixir leverages the <b>Erlang</b> VM (BEAM), known for running
+            <b>low-latency</b>, <b>distributed</b> and
+            <b>fault-tolerant</b> systems.
+          </p>
+        </section>
+        <section>
+          <h2>Erlang/OTP</h2>
+          <p>
+            Erlang is a programming language used to build
+            <b>massively scalable</b> soft real-time systems with requirements
+            on <b>high availability.</b>
+          </p>
+          <p>
+            <b>O</b>pen <b>T</b>elecom <b>P</b>latform is set of Erlang
+            libraries and design principles providing middleware to develop
+            these systems.
+          </p>
+        </section>
+        <section>
+          <img src="assets/erlang_creators.jpg" height="75%" width="75%" />
+          <ul>
+            <li>Ericsson, 1986</li>
+            <li>Telecom systems / switches</li>
+            <li>Open-sourced in 1998</li>
+          </ul>
+        </section>
+        <section>
+          <ul>
+            <li>Everything is a proces</li>
+            <li>Process creation is a lightweight operation</li>
+            <li>Message passing is the only way to interact</li>
+            <li>Processes share no resources</li>
+            <li>Processes do what they are supposed to do or fail</li>
+          </ul>
+        </section>
+        <section>
+          <blockquote>
+            If Java is 'write once, run anywhere', then Erlang is 'write once,
+            run forever'.
+          </blockquote>
+          <p>
+            <a href="https://www.youtube.com/watch?v=u41GEwIq2mE&t=3m59s"
+              >Joe Armstrong, 2013</a
+            >
+          </p>
+          <img src="assets/damn.webp" height="35%" width="35%" />
+        </section>
+      </div>
+    </div>
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+      Reveal.initialize({
+        history: true,
+        controls: false,
+        slideNumber: true,
+        slideNumber: "c/t",
+        dependencies: [
+          { src: "plugin/markdown/marked.js" },
+          { src: "plugin/markdown/markdown.js" },
+          { src: "plugin/notes/notes.js", async: true },
+          {
+            src: "plugin/highlight/highlight.js",
+            async: true,
+            callback: function() {
+              hljs.initHighlightingOnLoad();
+            }
+          }
+        ]
+      });
+    </script>
+  </body>
+</html>
