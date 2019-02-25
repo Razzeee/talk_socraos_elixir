@@ -163,6 +163,7 @@
       </section>
       <section>
         <h2>Demo</h2>
+        <p>GenServer - Supervisor - Observer</p>
       </section>
       <section>
         <h3>hot code reloading</h3>
@@ -200,6 +201,114 @@
           <li>ETS</li>
           <li>Mnesia</li>
         </ul>
+      </section>
+      <section>
+        <h1>Elixir</h1>
+        <h2>Ecosystem</h2>
+      </section>
+      <section>
+        <h3>mix</h3>
+        build tool
+        <pre><code class="hljs" data-trim contenteditable>
+          mix new test_project
+          mix test
+          mix help
+        </code></pre><br />
+        <h3>hex</h3>
+        <p>
+          package manager for erlang / elixir<br />
+          (currently ~8200 packages) <br />
+          <a href="https://hex.pm/" target="_blank">hex.pm</a> - <a href="https://hexdocs.pm/"
+            target="_blank">hexdocs.pm</a>
+        </p>
+      </section>
+      <section>
+        <h3>ExUnit</h3>
+        <pre><code class="hljs" data-trim contenteditable>
+          defmodule AssertionTest do
+            # async: case only 
+            # individual tests within test case are still run serially
+            use ExUnit.Case, async: true
+          
+            test "the truth" do
+              assert true
+            end
+          end
+        </code></pre>
+      </section>
+      <section>
+        <h3>Ecto</h3>
+        <ol>
+          <li>Ecto.Repo:<br /> wrapper around the data story</li>
+          <li>Ecto.Schema:<br /> maps a datasource into an Elixir struct</li>
+          <li>Ecto.Changeset:<br /> validate external parameters, change tracking</li>
+          <li>Ecto.Query:<br /> retrieve information from a given repository</li>
+        </ol>
+      </section>
+      <section>
+        <h3>Ecto.Adapters.SQL</h3>
+        <p>Adapter to access and migrate SQL-Databases</p>
+        <p>
+          <ul>
+            <li>PostgreSQL: Postgrex (built in)</li>
+            <li>MySQL / MariaDB: Mariaex (built in)</li>
+            <li>SQLite: Sqlite.Ecto2 </li>
+            <li>MSSQL: MssqlEcto, Tds.Ecto</li>
+          </ul>
+        </p><br />
+        <h3>Data Storages</h3>
+        <p>Mongodb, ExAWS (Dynamo, S3, usw),</p>
+      </section>
+      <section>
+        <h3>Phoenix</h3>
+        <p>web development framework</p>
+        <ul>
+          <li><b>M</b>odel <b>V</b>iew <b>C</b>ontroller</li>
+          <li>Channels (WebSockets)</li>
+          <li>Presence</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Demo</h2>
+        <p>Mix - ExUnit - Ecto - Phoenix</p>
+      </section>
+      <section>
+        <h3>Distillery</h3>
+        <p>dependency-free implementation of<br />release generation</p><br />
+        <h3>Nerves</h3>
+        <p>bulletproof embedded software</p>
+        <blockquote>
+          If a board can run embedded Linux,<br />it likely can run Nerves.
+        </blockquote>
+      </section>
+      <section>
+        <h3>...and there is more</h3>
+        <ul>
+          <li>Absinthe: GraphQL Toolkit</li>
+          <li>Flow:<br />parallel computation execution (like Map-Reduce)</li>
+          <li>GenStage:<br />exchanging events between producers and consumers (+ rate limiting)</li>
+        </ul>
+      </section>
+      <section>
+        <h3>Learning</h3>
+        <ul>
+          <li>
+            <a href="https://elixir-lang.org/getting-started/introduction.html" target="_blank">Getting started
+              Guide</a>
+          </li>
+          <li><a href="https://elixirschool.com/en/" target="_blank">Elixir School</a></li><br />
+          <li>Book: Programming Elixir 1.6 - Dave Thomas</li>
+          <li>Book: Elixir in Action - Saša Jurić</li><br />
+          <li>Podcast: <a href="https://devchat.tv/elixir-mix/" target="_blank">Elixir Mix</a></li>
+        </ul>
+      </section>
+      <section>
+        <h1>Questions?</h1>
+        <p>Presentation + Demos: <a href="https://github.com/hlhr">github.com/hlhr</a></p>
+        <p><br />
+          Blog: <a href="https://randomoutput.xyz">randomoutput.xyz</a><br />
+          Contact: <a href="mailto:mail@randomoutput.xyz">mail@randomoutput.xyz</a>
+        </p>
       </section>
     </div>
   </div>
