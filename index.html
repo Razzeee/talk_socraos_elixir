@@ -1,37 +1,35 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
-    />
-    <title>Elixir - Auf den Schultern eines Giganten</title>
-    <link rel="stylesheet" href="css/reveal.css" />
-    <link rel="stylesheet" href="css/theme/black.css" />
-    <link rel="stylesheet" href="lib/css/zenburn.css" />
-    <script>
-      var link = document.createElement("link");
-      link.rel = "stylesheet";
-      link.type = "text/css";
-      link.href = window.location.search.match(/print-pdf/gi)
-        ? "css/print/pdf.css"
-        : "css/print/paper.css";
-      document.getElementsByTagName("head")[0].appendChild(link);
-    </script>
-  </head>
 
-  <body>
-    <div class="reveal">
-      <div class="slides">
-        <section>
-          <h1>Elixir</h1>
-          <h2>Auf den Schultern eines Giganten</h2>
-          <p>Meetup SoCraOs 06.03.2018</p>
-        </section>
-        <section>
-          <h2>whoami</h2>
-          <pre><code class="hljs" data-trim contenteditable>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Elixir - Auf den Schultern eines Giganten</title>
+  <link rel="stylesheet" href="css/reveal.css" />
+  <link rel="stylesheet" href="css/theme/black.css" />
+  <link rel="stylesheet" href="lib/css/zenburn.css" />
+  <script>
+    var link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.type = "text/css";
+    link.href = window.location.search.match(/print-pdf/gi)
+      ? "css/print/pdf.css"
+      : "css/print/paper.css";
+    document.getElementsByTagName("head")[0].appendChild(link);
+  </script>
+</head>
+
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section>
+        <h1>Elixir</h1>
+        <h2>Auf den Schultern eines Giganten</h2>
+        <p>Meetup SoCraOs 06.03.2018</p>
+      </section>
+      <section>
+        <h2>whoami</h2>
+        <pre><code class="hljs" data-trim contenteditable>
           {
             "name": "Henning Löhr",
             "position": "Backend-Developer",
@@ -41,121 +39,193 @@
             "mail": "mail@randomoutput.xyz"
           }
 				</code></pre>
-        </section>
-        <section>
-          <h1>Elixir</h1>
-        </section>
-        <section>
-          <p>
-            Created by <b>José Valim</b> circa 2012, Former Rails Core Team
-            Member
-          </p>
-          <blockquote>
-            He was trying to make Rails really thread safe, found Erlang and
-            created a new programming language by mistake.
-          </blockquote>
-        </section>
-        <section>
-          <p>
-            Elixir is a <b>dynamic</b>, <b>functional</b> language designed for
-            building <b>scalable</b> and
-            <b>maintainable</b>
-            applications.
-          </p>
-          <p>
-            Elixir leverages the <b>Erlang</b> VM (BEAM), known for running
-            <b>low-latency</b>, <b>distributed</b> and
-            <b>fault-tolerant</b> systems.
-          </p>
-        </section>
-        <section>
-          <h2>Functional programming</h2>
-          <ul>
-            <li>...</li>
-            <li>Pattern matching</li>
-            <li>Immutability</li>
-            <li>...</li>
-          </ul>
-        </section>
-        <section>
-          <h1>Erlang/OTP</h1>
-        </section>
-        <section>
-          <p>
-            Erlang is a programming language used to build
-            <b>massively scalable</b> soft real-time systems with requirements
-            on <b>high availability.</b>
-          </p>
-          <p>
-            <b>O</b>pen <b>T</b>elecom <b>P</b>latform is set of Erlang
-            libraries and design principles providing middleware to develop
-            these systems.
-          </p>
-        </section>
-        <section>
-          <img src="assets/erlang_creators.jpg" height="75%" width="75%" />
-          <ul>
-            <li>Ericsson, 1986</li>
-            <li>Telecom systems / switches</li>
-            <li>Open-sourced in 1998</li>
-          </ul>
-        </section>
-        <section>
-          <ul>
-            <li>Everything is a proces</li>
-            <li>Process creation is a lightweight operation</li>
-            <li>Message passing is the only way to interact</li>
-            <li>Processes share no resources</li>
-            <li>Processes do what they are supposed to do or fail</li>
-          </ul>
-        </section>
-        <section>
-          <blockquote>
-            If Java is 'write once, run anywhere', then Erlang is 'write once,
-            run forever'.
-          </blockquote>
-          <p>
-            <a href="https://www.youtube.com/watch?v=u41GEwIq2mE&t=3m59s"
-              >Joe Armstrong, 2013</a
-            >
-          </p>
-          <img src="assets/damn.webp" height="35%" width="35%" />
-        </section>
-        <section>
-          <ul>
-            <li>Amazon SimpleDB</li>
-            <li>
-              WhatsApp messaging servers (2 million connected users per server)
-            </li>
-            <li>Motorola (call processing)</li>
-            <li>AdRole (ad bidding system)</li>
-            <li>a lot mobile game backends</li>
-          </ul>
-        </section>
-      </div>
-    </div>
-    <script src="lib/js/head.min.js"></script>
-    <script src="js/reveal.js"></script>
+      </section>
+      <section>
+        <h1>Elixir</h1>
+      </section>
+      <section>
+        <p>
+          Created by <b>José Valim</b> circa 2012, Former Rails Core Team
+          Member
+        </p>
+        <blockquote>
+          He was trying to make Rails really thread safe, found Erlang and
+          created a new programming language by mistake.
+        </blockquote>
+      </section>
+      <section>
+        <p>
+          Elixir is a <b>dynamic</b>, <b>functional</b> language designed for
+          building <b>scalable</b> and
+          <b>maintainable</b>
+          applications.
+        </p>
+        <p>
+          Elixir leverages the <b>Erlang</b> VM (BEAM), known for running
+          <b>low-latency</b>, <b>distributed</b> and
+          <b>fault-tolerant</b> systems.
+        </p>
+      </section>
+      <section>
+        <h2>Functional programming</h2>
+        <ul>
+          <li>...</li>
+          <li>Pattern matching</li>
+          <li>Immutability</li>
+          <li>...</li>
+        </ul>
+      </section>
+      <section>
+        <h1>Erlang/OTP</h1>
+      </section>
+      <section>
+        <p>
+          Erlang is a programming language used to build
+          <b>massively scalable</b> soft real-time systems with requirements
+          on <b>high availability.</b>
+        </p>
+        <p>
+          <b>O</b>pen <b>T</b>elecom <b>P</b>latform is set of Erlang
+          libraries and design principles providing middleware to develop
+          these systems.
+        </p>
+      </section>
+      <section>
+        <img src="assets/erlang_creators.jpg" height="75%" width="75%" />
+        <ul>
+          <li>Ericsson, 1986</li>
+          <li>Telecom systems / switches</li>
+          <li>Open-sourced in 1998</li>
+        </ul>
+      </section>
+      <section>
+        <ul>
+          <li>Everything is a proces</li>
+          <li>Process creation is a lightweight operation</li>
+          <li>Message passing is the only way to interact</li>
+          <li>Processes share no resources</li>
+          <li>Processes do what they are supposed to do or fail</li>
+        </ul>
+      </section>
+      <section>
+        <blockquote>
+          If Java is 'write once, run anywhere', then Erlang is 'write once,
+          run forever'.
+        </blockquote>
+        <p>
+          <a href="https://www.youtube.com/watch?v=u41GEwIq2mE&t=3m59s">Joe Armstrong, 2013</a>
+        </p>
+        <img src="assets/damn.webp" height="35%" width="35%" />
+      </section>
+      <section>
+        <ul>
+          <li>Amazon SimpleDB</li>
+          <li>
+            WhatsApp messaging servers (2 million connected users per server)
+          </li>
+          <li>Motorola (call processing)</li>
+          <li>AdRole (ad bidding system)</li>
+          <li>a lot mobile game backends</li>
+        </ul>
+      </section>
+      <section>
+        <h1>Elixir</h1>
+        <h2>Syntax</h2>
+      </section>
+      <section>
+        <h2>Demo</h2>
+        <a href="https://learnxinyminutes.com/docs/elixir/" target="_blank">Elixir in Y Minutes</a>
+      </section>
+      <section>
+        <p>Elixir is a <b>dynamically typed</b> language, but...</p>
+        <pre><code class="hljs" data-trim contenteditable>
+          defmodule LousyCalculator do
+            @spec add(number, number) :: number
+            def add(x, y), do: x + y
 
-    <script>
-      Reveal.initialize({
-        history: true,
-        controls: false,
-        slideNumber: true,
-        slideNumber: "c/t",
-        dependencies: [
-          { src: "plugin/markdown/marked.js" },
-          { src: "plugin/markdown/markdown.js" },
-          { src: "plugin/notes/notes.js", async: true },
-          {
-            src: "plugin/highlight/highlight.js",
-            async: true,
-            callback: function() {
-              hljs.initHighlightingOnLoad();
-            }
+            @spec multiply(number, number) :: number
+            def multiply(x, y), do: x * y
+          end
+        </code></pre>
+        <p>
+          Typespecs +
+          <a href="https://github.com/jeremyjh/dialyxir">Dialyzer</a> /
+          <a href="http://erlang.org/doc/man/dialyzer.html">Dialyzer</a> = &lt;3
+        </p>
+      </section>
+      <section>
+        <h1>Elixir</h1>
+        <h2>OTP</h2>
+      </section>
+      <section>
+        <h3>Actor model</h3>
+        <a href="https://www.brianstorti.com/the-actor-model/" target="_blank"><img src="assets/actor_model.svg" /></a>
+      </section>
+      <section>
+        <h2>Demo</h2>
+      </section>
+      <section>
+        <h3>hot code reloading</h3>
+        <p>run multiple versions of a module simultaneously</p>
+        <pre><code class="hljs" data-trim contenteditable>
+          defmodule Customer do
+            use GenServer
+
+            ...
+            
+            def code_change(_old_vsn, state, _extra) do
+              # transform to new state
+            end
+          end
+        </code></pre>
+        <p><a href="https://blog.appsignal.com/2018/10/16/elixir-alchemy-hot-code-reloading-in-elixir.html">
+            Elixir Alchemy
+          </a></p>
+      </section>
+      <section>
+        <h3>Umbrella Applications</h3>
+        <p>
+          project composed of many applications<br />+<br />
+          communication via message passing<br />+<br />
+          location transparency<br />(message exchange between different nodes)<br />=<br />
+          <a href="http://blog.plataformatec.com.br/2015/06/elixir-in-times-of-microservices/">microservices</a>
+        </p>
+      </section>
+      <section>
+        <h3>...and there is more</h3>
+        <ul>
+          <li>Dynamic supervisors</li>
+          <li>Agent</li>
+          <li>Task</li>
+          <li>ETS</li>
+          <li>Mnesia</li>
+        </ul>
+      </section>
+    </div>
+  </div>
+  <script src="lib/js/head.min.js"></script>
+  <script src="js/reveal.js"></script>
+
+  <script>
+    Reveal.initialize({
+      history: true,
+      controls: false,
+      slideNumber: true,
+      slideNumber: "c/t",
+      dependencies: [
+        { src: "plugin/markdown/marked.js" },
+        { src: "plugin/markdown/markdown.js" },
+        { src: "plugin/notes/notes.js", async: true },
+        {
+          src: "plugin/highlight/highlight.js",
+          async: true,
+          callback: function () {
+            hljs.initHighlightingOnLoad();
           }
-        ]
-      });
-    </script>
-  </body>
+        }
+      ]
+    });
+  </script>
+</body>
+
 </html>
