@@ -15,5 +15,6 @@ defmodule Math do
 end
 
 IO.inspect(Math.sum([1, 2, 3, 4, 5, 6]))
+IO.inspect(Math.sum([]))
 
 # IO.inspect(Enum.sum([1, 2, 3, 4, 5, 6]))
