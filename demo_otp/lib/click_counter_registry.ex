@@ -3,8 +3,8 @@ defmodule DemoOtp.ClickCounterRegistry do
 
   ## client
 
-  def start_link(_opts) do
-    GenServer.start_link(__MODULE__, :ok)
+  def start_link(opts) do
+    GenServer.start_link(__MODULE__, :ok, opts)
   end
 
   def lookup(server, website) do
