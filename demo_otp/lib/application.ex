@@ -1,4 +1,4 @@
-defmodule DemoOtp.Application do
+defmodule DemoOtp do
   use Application
 
   def start(_type, _args) do

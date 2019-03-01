@@ -15,7 +15,7 @@ defmodule DemoOtp.MixProject do
   def application do
     [
       extra_applications: [:logger],
-      mod: {DemoOtp.Application, []}
+      mod: {DemoOtp, []}
     ]
   end
 
