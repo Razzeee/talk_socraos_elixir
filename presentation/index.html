@@ -78,6 +78,12 @@
             <b>low-latency</b>, <b>distributed</b> and
             <b>fault-tolerant</b> systems.
           </p>
+          <aside class="notes">
+            <p>
+              Erlang: Ericsson Language
+            </p>
+            <p>BAN Reason: in favor for non-proprietary languages</p>
+          </aside>
         </section>
         <section>
           <h2>Functional programming</h2>
@@ -87,6 +93,12 @@
             <li>Immutability</li>
             <li>...</li>
           </ul>
+          <aside class="notes">
+            <p>Monad</p>
+            <p>High Order Functions</p>
+            <p>Currying</p>
+            <p>Isomorphism</p>
+          </aside>
         </section>
         <section>
           <h1>Erlang &amp; OTP</h1>
@@ -104,6 +116,15 @@
             <b>massively scalable</b> soft real-time systems with requirements
             on <b>high availability.</b>
           </p>
+          <aside class="notes">
+            <p>deadline: guarantee response within specified time</p>
+            <p>hard real-time: any missed deadline = system failure</p>
+            <p>
+              soft real-time: <br />allows for frequently missed deadlines,<br />
+              as long as tasks are timely executed their results continue to
+              have value
+            </p>
+          </aside>
         </section>
         <section>
           <p>
@@ -159,17 +180,16 @@
               milliseconds
             </p>
             <p>BAN Reason: in favor for non-proprietary languages</p>
+            <p>Armstrong got rehired in 2004</p>
           </aside>
         </section>
         <section>
           <ul>
-            <li>Amazon SimpleDB</li>
             <li>
               WhatsApp messaging servers<br />(2 million connected users per
               server)
             </li>
-            <li>Motorola (call processing)</li>
-            <li>AdRole (ad bidding system)</li>
+            <li>Motorola, Ericsson (call processing)</li>
             <li>
               <a
                 href="http://www.erlang-factory.com/upload/presentations/395/ErlangandFirst-PersonShooters.pdf"
@@ -179,6 +199,13 @@
               </a>
             </li>
           </ul>
+          <aside class="notes">
+            <p>WhatsApp: 55 Employees, 19 Milliarden US-Dollar</p>
+            <p>
+              COD: TCP-Connection management, controlls Python, in-game data
+              handling
+            </p>
+          </aside>
         </section>
         <section>
           <h1>Elixir</h1>
@@ -226,6 +253,18 @@
           <a href="https://www.brianstorti.com/the-actor-model/" target="_blank"
             ><img src="assets/actor_model.svg"
           /></a>
+          <aside class="notes">
+            <p>
+              actor: <br />process a given message sequentially<br />
+              it doesn’t matter if the actor is running locally or in another
+              node
+            </p>
+            <p>
+              supervisor: <br />will be notified when the supervised process
+              crashes <br />
+              then can do something about it
+            </p>
+          </aside>
         </section>
         <section>
           <h2>Demo</h2>
@@ -283,6 +322,11 @@
             <li>Mnesia</li>
             <li>...</li>
           </ul>
+          <aside class="notes">
+            <p>Task: execute some task</p>
+            <p>ETS: key value store, Erlang Term Storage</p>
+            <p>Mnesia: database management system</p>
+          </aside>
         </section>
         <section>
           <h1>Elixir</h1>
@@ -294,6 +338,7 @@
           <pre><code class="hljs" data-trim contenteditable>
           mix new test_project
           mix test
+          mix [task name]
           mix help
         </code></pre>
           <br />
@@ -311,8 +356,6 @@
           <h3>ExUnit</h3>
           <pre><code class="hljs" data-trim contenteditable>
           defmodule AssertionTest do
-            # async: case only 
-            # individual tests within test case are still run serially
             use ExUnit.Case, async: true
           
             test "the truth" do
@@ -320,26 +363,42 @@
             end
           end
         </code></pre>
+          <aside class="notes">
+            <p>
+              async: <br />case only<br />individual tests within test case are
+              still run serially
+            </p>
+          </aside>
         </section>
         <section>
           <h3>Ecto</h3>
-          <p>wrapper around the relational databases</p>
+          <p>toolkit for data handling and processing</p>
           <ul>
-            <li>query engine</li>
+            <li>language integrated queries</li>
             <li>data mapping</li>
             <li>change tracking</li>
             <li>validation</li>
             <li>migration</li>
           </ul>
+          <p>
+            commonly used to interact with databases
+          </p>
         </section>
         <section>
           <h3>Phoenix</h3>
           <p>web development framework</p>
           <ul>
             <li><b>M</b>odel <b>V</b>iew <b>C</b>ontroller</li>
-            <li>Channels (WebSockets)</li>
+            <li>Channels</li>
             <li>Presence</li>
           </ul>
+          <aside class="notes">
+            <p>Channels: soft real-time communication via WebSockets</p>
+            <p>
+              Presence: registering process information on a topic e.g. Status
+              in Chats, CRDTs
+            </p>
+          </aside>
         </section>
         <section>
           <h2>Demo</h2>
@@ -369,6 +428,20 @@
               Nerves - Tim Mecklem
             </a>
           </p>
+          <aside class="notes">
+            <p>
+              platform: a customized, minimal Buildroot-derived Linux that boots
+              directly to the BEAM VM
+            </p>
+            <p>
+              framework: ready-to-go library of Elixir modules to get you up and
+              running quickly
+            </p>
+            <p>
+              tooling: powerful command-line tools to manage builds, update
+              firmware, configure devices
+            </p>
+          </aside>
         </section>
         <section>
           <h3>...and there is more</h3>
@@ -420,7 +493,7 @@
               <a href="https://bleacherreport.com/" target="_blank"
                 >Bleacher Report</a
               >
-              (News Site)
+              (Sport News Site)
             </li>
             <li>
               <a href="https://www.digimondo.de/" target="_blank">digimondo</a>
