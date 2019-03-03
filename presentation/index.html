@@ -1,35 +1,43 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>Elixir - Auf den Schultern eines Giganten</title>
+    <link rel="stylesheet" href="css/reveal.css" />
+    <link rel="stylesheet" href="css/theme/black.css" />
+    <link rel="stylesheet" href="lib/css/zenburn.css" />
+    <script>
+      var link = document.createElement("link");
+      link.rel = "stylesheet";
+      link.type = "text/css";
+      link.href = window.location.search.match(/print-pdf/gi)
+        ? "css/print/pdf.css"
+        : "css/print/paper.css";
+      document.getElementsByTagName("head")[0].appendChild(link);
+    </script>
+  </head>
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <title>Elixir - Auf den Schultern eines Giganten</title>
-  <link rel="stylesheet" href="css/reveal.css" />
-  <link rel="stylesheet" href="css/theme/black.css" />
-  <link rel="stylesheet" href="lib/css/zenburn.css" />
-  <script>
-    var link = document.createElement("link");
-    link.rel = "stylesheet";
-    link.type = "text/css";
-    link.href = window.location.search.match(/print-pdf/gi)
-      ? "css/print/pdf.css"
-      : "css/print/paper.css";
-    document.getElementsByTagName("head")[0].appendChild(link);
-  </script>
-</head>
-
-<body>
-  <div class="reveal">
-    <div class="slides">
-      <section>
-        <h1>Elixir</h1>
-        <h2>Auf den Schultern eines Giganten</h2>
-        <p><a href="https://www.meetup.com/de-DE/SoCraOs/events/258958098/" target="_blank">Meetup SoCraOs 06.03.2018</a></p>
-      </section>
-      <section>
-        <h2>whoami</h2>
-        <pre><code class="hljs" data-trim contenteditable>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h1>Elixir</h1>
+          <h2>Auf den Schultern eines Giganten</h2>
+          <p>
+            <a
+              href="https://www.meetup.com/de-DE/SoCraOs/events/258958098/"
+              target="_blank"
+              >Meetup SoCraOs 06.03.2018</a
+            >
+          </p>
+        </section>
+        <section>
+          <h2>whoami</h2>
+          <pre><code class="hljs" data-trim contenteditable>
           {
             "name": "Henning Löhr",
             "position": "Backend-Developer",
@@ -39,109 +47,156 @@
             "mail": "mail@randomoutput.xyz"
           }
 				</code></pre>
-      </section>
-      <section>
-        <h1>Elixir</h1>
-      </section>
-      <section>
-        <p>
-          Created by <b>José Valim</b> circa 2012,<br />
-          Former Rails Core Team Member
-        </p>
-        <blockquote>
-          He was trying to make Rails really thread safe, found Erlang and
-          created a new programming language by mistake.
-        </blockquote>
-        <p>
-          <a href="https://github.com/elixir-lang/elixir" target="_blank">github.com/elixir-lang/elixir</a>
-        </p>
-      </section>
-      <section>
-        <p>
-          Elixir is a <b>dynamic</b>, <b>functional</b> language designed for
-          building <b>scalable</b> and
-          <b>maintainable</b>
-          applications.
-        </p>
-        <p>
-          Elixir leverages the <b>Erlang</b> VM (BEAM), known for running
-          <b>low-latency</b>, <b>distributed</b> and
-          <b>fault-tolerant</b> systems.
-        </p>
-      </section>
-      <section>
-        <h2>Functional programming</h2>
-        <ul>
-          <li>...</li>
-          <li>Pattern matching</li>
-          <li>Immutability</li>
-          <li>...</li>
-        </ul>
-      </section>
-      <section>
-        <h1>Erlang/OTP</h1>
-      </section>
-      <section>
-        <p>
-          Erlang is a programming language used to build
-          <b>massively scalable</b> soft real-time systems with requirements
-          on <b>high availability.</b>
-        </p>
-        <p>
-          <b>O</b>pen <b>T</b>elecom <b>P</b>latform is set of Erlang
-          libraries and design principles providing middleware to develop
-          these systems.
-        </p>
-      </section>
-      <section>
-        <img src="assets/erlang_creators.jpg" height="75%" width="75%" />
-        <ul>
-          <li>Ericsson, 1986</li>
-          <li>Telecom systems / switches</li>
-          <li>Open-sourced in 1998</li>
-        </ul>
-      </section>
-      <section>
-        <ul>
-          <li>Everything is a process</li>
-          <li>Process creation is a lightweight operation</li>
-          <li>Message passing is the only way to interact</li>
-          <li>Processes share no resources</li>
-          <li>Processes do what they are supposed to do or fail (fail  fast)</li>
-        </ul>
-      </section>
-      <section>
-        <blockquote>
-          If Java is 'write once, run anywhere', then Erlang is 'write once,
-          run forever'.
-        </blockquote>
-        <p>
-          <a href="https://www.youtube.com/watch?v=u41GEwIq2mE&t=3m59s" target="_blank">Joe Armstrong, 2013</a>
-        </p>
-        <img src="assets/damn.webp" height="35%" width="35%" />
-      </section>
-      <section>
-        <ul>
-          <li>Amazon SimpleDB</li>
-          <li>
-            WhatsApp messaging servers<br />(2 million connected users per server)
-          </li>
-          <li>Motorola (call processing)</li>
-          <li>AdRole (ad bidding system)</li>
-          <li>a lot mobile game backends</li>
-        </ul>
-      </section>
-      <section>
-        <h1>Elixir</h1>
-        <h2>Syntax</h2>
-      </section>
-      <section>
-        <h2>Demo</h2>
-        <p><a href="https://github.com/hlhr/talk_socraos_elixir/tree/master/demo_syntax" target="_blank">demo_syntax</a></p>
-      </section>
-      <section>
-        <p>Elixir is a <b>dynamically typed</b> language, but...</p>
-        <pre><code class="hljs" data-trim contenteditable>
+        </section>
+        <section>
+          <h1>Elixir</h1>
+        </section>
+        <section>
+          <p>
+            Created by <b>José Valim</b> circa 2012,<br />
+            Former Rails Core Team Member
+          </p>
+          <blockquote>
+            He was trying to make Rails really thread safe, found Erlang and
+            created a new programming language by mistake.
+          </blockquote>
+          <p>
+            <a href="https://github.com/elixir-lang/elixir" target="_blank"
+              >github.com/elixir-lang/elixir</a
+            >
+          </p>
+        </section>
+        <section>
+          <p>
+            Elixir is a <b>dynamic</b>, <b>functional</b> language designed for
+            building <b>scalable</b> and
+            <b>maintainable</b>
+            applications.
+          </p>
+          <p>
+            Elixir leverages the <b>Erlang</b> VM (BEAM), known for running
+            <b>low-latency</b>, <b>distributed</b> and
+            <b>fault-tolerant</b> systems.
+          </p>
+        </section>
+        <section>
+          <h2>Functional programming</h2>
+          <ul>
+            <li>...</li>
+            <li>Pattern matching</li>
+            <li>Immutability</li>
+            <li>...</li>
+          </ul>
+        </section>
+        <section>
+          <h1>Erlang &amp; OTP</h1>
+        </section>
+        <section>
+          <img src="assets/erlang_creators.jpg" height="75%" width="75%" />
+          <ul>
+            <li>Ericsson, 1986</li>
+            <li>Telecom systems / switches</li>
+          </ul>
+        </section>
+        <section>
+          <p>
+            Erlang is a programming language used to build
+            <b>massively scalable</b> soft real-time systems with requirements
+            on <b>high availability.</b>
+          </p>
+        </section>
+        <section>
+          <p>
+            <b>O</b>pen <b>T</b>elecom <b>P</b>latform is a set of Erlang
+            libraries and design principles providing middleware to develop
+            these systems.
+          </p>
+        </section>
+        <section>
+          <ul>
+            <li>Everything is a process</li>
+            <li>Process creation is a lightweight operation</li>
+            <li>Message passing is the only way to interact</li>
+            <li>Processes share no resources</li>
+            <li>
+              Processes do what they are supposed to do or fail (fail fast)
+            </li>
+          </ul>
+        </section>
+        <section>
+          <blockquote>
+            If Java is 'write once, run anywhere', then Erlang is 'write once,
+            run forever'.
+          </blockquote>
+          <p>
+            <a
+              href="https://www.youtube.com/watch?v=u41GEwIq2mE&t=3m59s"
+              target="_blank"
+              >Joe Armstrong, 2013</a
+            >
+          </p>
+          <img src="assets/damn.webp" height="35%" width="35%" />
+        </section>
+        <section>
+          <h3>1998</h3>
+          <ul>
+            <li>
+              Ericsson announced the AXD301 switch<br />(a million lines of
+              Erlang)
+            </li>
+            <li>Ericsson Radio Systems banned Erlang</li>
+            <li>Joe Armstrong (and others) leaves Ericsson</li>
+            <li>Erlang / OTP was Open Sourced</li>
+          </ul>
+          <p>
+            <a href="https://github.com/erlang" target="_blank">
+              github.com/erlang
+            </a>
+          </p>
+          <aside class="notes">
+            <p>
+              AXD301: achieve a high availability of nine "9"s / 31.56
+              milliseconds
+            </p>
+            <p>BAN Reason: in favor for non-proprietary languages</p>
+          </aside>
+        </section>
+        <section>
+          <ul>
+            <li>Amazon SimpleDB</li>
+            <li>
+              WhatsApp messaging servers<br />(2 million connected users per
+              server)
+            </li>
+            <li>Motorola (call processing)</li>
+            <li>AdRole (ad bidding system)</li>
+            <li>
+              <a
+                href="http://www.erlang-factory.com/upload/presentations/395/ErlangandFirst-PersonShooters.pdf"
+                target="_blank"
+              >
+                Call of Duty (game server backend)
+              </a>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h1>Elixir</h1>
+          <h2>Syntax</h2>
+        </section>
+        <section>
+          <h2>Demo</h2>
+          <p>
+            <a
+              href="https://github.com/hlhr/talk_socraos_elixir/tree/master/demo_syntax"
+              target="_blank"
+              >demo_syntax</a
+            >
+          </p>
+        </section>
+        <section>
+          <p>Elixir is a <b>dynamically typed</b> language, but...</p>
+          <pre><code class="hljs" data-trim contenteditable>
           defmodule LousyCalculator do
             @spec add(number, number) :: number
             def add(x, y), do: x + y
@@ -150,29 +205,43 @@
             def multiply(x, y), do: x * y
           end
         </code></pre>
-        <p>
-          Typespecs +
-          <a href="https://github.com/jeremyjh/dialyxir" target="_blank">Dialyzer</a> /
-          <a href="http://erlang.org/doc/man/dialyzer.html" target="_blank">Dialyzer</a> = &lt;3
-        </p>
-      </section>
-      <section>
-        <h1>Elixir</h1>
-        <h2>OTP</h2>
-      </section>
-      <section>
-        <h3>Actor model</h3>
-        <a href="https://www.brianstorti.com/the-actor-model/" target="_blank"><img src="assets/actor_model.svg" /></a>
-      </section>
-      <section>
-        <h2>Demo</h2>
-        <p>GenServer - Supervisor - Observer</p>
-        <p><a href="https://github.com/hlhr/talk_socraos_elixir/tree/master/demo_otp" target="_blank">demo_otp</a></p>
-      </section>
-      <section>
-        <h3>hot code reloading</h3>
-        <p>run multiple versions of a module simultaneously</p>
-        <pre><code class="hljs" data-trim contenteditable>
+          <p>
+            Typespecs +
+            <a href="https://github.com/jeremyjh/dialyxir" target="_blank"
+              >Dialyxir</a
+            >
+            /
+            <a href="http://erlang.org/doc/man/dialyzer.html" target="_blank"
+              >Dialyzer</a
+            >
+            = &lt;3
+          </p>
+        </section>
+        <section>
+          <h1>Elixir</h1>
+          <h2>OTP</h2>
+        </section>
+        <section>
+          <h3>Actor model</h3>
+          <a href="https://www.brianstorti.com/the-actor-model/" target="_blank"
+            ><img src="assets/actor_model.svg"
+          /></a>
+        </section>
+        <section>
+          <h2>Demo</h2>
+          <p>GenServer - Agent - Supervisor - Observer</p>
+          <p>
+            <a
+              href="https://github.com/hlhr/talk_socraos_elixir/tree/master/demo_otp"
+              target="_blank"
+              >demo_otp</a
+            >
+          </p>
+        </section>
+        <section>
+          <h3>hot code reloading</h3>
+          <p>run multiple versions of a module simultaneously</p>
+          <pre><code class="hljs" data-trim contenteditable>
           defmodule Customer do
             use GenServer
 
@@ -183,53 +252,64 @@
             end
           end
         </code></pre>
-        <p><a href="https://blog.appsignal.com/2018/10/16/elixir-alchemy-hot-code-reloading-in-elixir.html" target="_blank">
-            Elixir Alchemy
-          </a></p>
-      </section>
-      <section>
-        <h3>Umbrella Applications</h3>
-        <p>
-          project composed of many applications<br />+<br />
-          communication via message passing<br />+<br />
-          location transparency<br />(message exchange between different nodes)<br />=<br />
-          <a href="http://blog.plataformatec.com.br/2015/06/elixir-in-times-of-microservices/" target="_blank">microservices</a>
-        </p>
-      </section>
-      <section>
-        <h3>...and there is more</h3>
-        <ul>
-          <li>Agent</li>
-          <li>Task</li>
-          <li>ETS</li>
-          <li>Mnesia</li>
-        </ul>
-      </section>
-      <section>
-        <h1>Elixir</h1>
-        <h2>Ecosystem</h2>
-      </section>
-      <section>
-        <h3>mix</h3>
-        build tool
-        <pre><code class="hljs" data-trim contenteditable>
+          <p>
+            <a
+              href="https://blog.appsignal.com/2018/10/16/elixir-alchemy-hot-code-reloading-in-elixir.html"
+              target="_blank"
+            >
+              Elixir Alchemy: Hot Code Reloading in Elixir
+            </a>
+          </p>
+        </section>
+        <section>
+          <h3>Umbrella Applications</h3>
+          <p>
+            project composed of many applications<br />+<br />
+            communication via message passing<br />+<br />
+            location transparency<br />(message exchange between different
+            nodes)<br />=<br />
+            <a
+              href="http://blog.plataformatec.com.br/2015/06/elixir-in-times-of-microservices/"
+              target="_blank"
+              >microservices</a
+            >
+          </p>
+        </section>
+        <section>
+          <h3>...and there is more</h3>
+          <ul>
+            <li>Task</li>
+            <li>ETS</li>
+            <li>Mnesia</li>
+            <li>...</li>
+          </ul>
+        </section>
+        <section>
+          <h1>Elixir</h1>
+          <h2>Ecosystem</h2>
+        </section>
+        <section>
+          <h3>mix</h3>
+          build tool
+          <pre><code class="hljs" data-trim contenteditable>
           mix new test_project
           mix test
           mix help
-        </code></pre><br />
-      </section>
-      <section>
-        <h3>hex</h3>
-        <p>
-          package manager for erlang<br />
-          (currently ~8200 packages) <br />
-          <a href="https://hex.pm/" target="_blank">hex.pm</a> - <a href="https://hexdocs.pm/"
-            target="_blank">hexdocs.pm</a>
-        </p>
-      </section>
-      <section>
-        <h3>ExUnit</h3>
-        <pre><code class="hljs" data-trim contenteditable>
+        </code></pre>
+          <br />
+        </section>
+        <section>
+          <h3>hex</h3>
+          <p>
+            package manager for erlang<br />
+            (currently ~8200 packages) <br />
+            <a href="https://hex.pm/" target="_blank">hex.pm</a> -
+            <a href="https://hexdocs.pm/" target="_blank">hexdocs.pm</a>
+          </p>
+        </section>
+        <section>
+          <h3>ExUnit</h3>
+          <pre><code class="hljs" data-trim contenteditable>
           defmodule AssertionTest do
             # async: case only 
             # individual tests within test case are still run serially
@@ -240,129 +320,215 @@
             end
           end
         </code></pre>
-      </section>
-      <section>
-        <h3>Ecto</h3>
-        <ol>
-          <li>Ecto.Repo:<br /> wrapper around the data story</li>
-          <li>Ecto.Schema:<br /> maps a datasource into an Elixir struct</li>
-          <li>Ecto.Changeset:<br /> validate external parameters, change tracking</li>
-          <li>Ecto.Query:<br /> retrieve information from a given repository</li>
-        </ol>
-      </section>
-      <section>
-        <h3>Ecto.Adapters.SQL</h3>
-        <p>Adapter to access and migrate SQL-Databases</p>
-        <p>
+        </section>
+        <section>
+          <h3>Ecto</h3>
+          <p>wrapper around the relational databases</p>
           <ul>
-            <li>PostgreSQL: Postgrex (built in)</li>
-            <li>MySQL / MariaDB: Mariaex (built in)</li>
-            <li>SQLite: Sqlite.Ecto2 </li>
-            <li>MSSQL: MssqlEcto, Tds.Ecto</li>
+            <li>query engine</li>
+            <li>data mapping</li>
+            <li>change tracking</li>
+            <li>validation</li>
+            <li>migration</li>
           </ul>
-        </p>
-      </section>
-      <section>
-        <h3>Phoenix</h3>
-        <p>web development framework</p>
-        <ul>
-          <li><b>M</b>odel <b>V</b>iew <b>C</b>ontroller</li>
-          <li>Channels (WebSockets)</li>
-          <li>Presence</li>
-        </ul>
-      </section>
-      <section>
-        <h2>Demo</h2>
-        <p>Mix - ExUnit - Ecto - Phoenix</p>
-      </section>
-      <section>
-        <h3>Distillery</h3>
-        <p>creates an Erlang OTP release from an Elixir project</p>
-        <p>self contained release<br />(Erlang Runtime System (ERTS) included)</p>
-        <p>will be part of elixir in the future</p>
-      </section>
-      <section>
-        <h3>Nerves</h3>
-        <p>bulletproof embedded software</p>
-        <blockquote>
-          If a board can run embedded Linux,<br />it likely can run Nerves.
-        </blockquote><br/>
-        <p>
-          <a href="https://www.youtube.com/watch?v=ARQD4BN_5ns" target="_blank">
-            ElixirConf 2017 - Building an Artificial Pancreas with Elixir and Nerves - Tim Mecklem
-          </a>
-        </p>
-      </section>
-      <section>
-        <h3>...and there is more</h3>
-        <ul>
-          <li>Absinthe: GraphQL Toolkit</li>
-          <li>Flow:<br />parallel computation execution (like Map-Reduce)</li>
-          <li>GenStage:<br />exchanging events between producers and consumers (+ rate limiting)</li>
-        </ul>
-      </section>
-      <section>
-        <h3>Companies using Elixir</h3>
-        <ul>
-          <li><a href="https://discordapp.com/" target="_blank">Discord</a> (Communication Platform)</li>
-          <li><a href="https://forzafootball.com/forza-football/" target="_blank">Forza Football</a> (Mobile App)</li>
-          <li><a href="https://simplecast.com/" target="_blank">Simplecast</a> (Podcast Publishing/Hosting)</li>
-          <li><a href="https://weedmaps.com/" target="_blank">Weedmaps</a> (Solutions for the cannabis sector)</li>
-          <li><a href="https://gameanalytics.com/" target="_blank">GameAnalytics</a> (Analytics)</li>
-          <li><a href="https://www.wundermobility.com/" target="_blank">Wunder</a> (Shared Mobility)</li>
-          <li><a href="https://bleacherreport.com/" target="_blank">Bleacher Report</a> (News Site)</li>
-          <li><a href="https://www.digimondo.de/" target="_blank">digimondo</a> (IoT Services)</li>
-          <li>...</li>
-        </ul>
-      </section>
-      <section>
-        <h3>Next steps</h3>
-        <ul>
-          <li>
-            Online: <a href="https://elixir-lang.org/getting-started/introduction.html" target="_blank">Getting started
-              Guide</a>
-          </li>
-          <li>Online: <a href="https://elixirschool.com/en/" target="_blank">Elixir School</a></li>
-          <li>Book: <a href="https://pragprog.com/book/elixir16/programming-elixir-1-6" target="_blank">Programming Elixir - Dave Thomas</a></li>
-          <li>Book: <a href="https://www.manning.com/books/elixir-in-action-second-edition" target="_blank">Elixir in Action - Saša Jurić</a></li>
-          <li>YouTube: <a href="https://www.youtube.com/channel/UC0l2QTnO1P2iph-86HHilMQ/videos" target="_blank">ElixirConf</a></li>
-          <li>Newsletter: <a href="http://plataformatec.com.br/elixir-radar" target="_blank">Elixir Radar</a></li>
-          <li>Podcast: <a href="https://devchat.tv/elixir-mix/" target="_blank">Elixir Mix</a></li>
-        </ul>
-      </section>
-      <section>
-        <h1>Questions?</h1>
-        <p>Presentation + Demos:<br /><a href="https://github.com/hlhr/talk_socraos_elixir" target="_blank">github.com/hlhr/talk_socraos_elixir</a></p>
-        <p><br />
-          Blog: <a href="https://randomoutput.xyz" target="_blank">randomoutput.xyz</a><br />
-          Contact: <a href="mailto:mail@randomoutput.xyz" target="_blank">mail@randomoutput.xyz</a>
-        </p>
-      </section>
+        </section>
+        <section>
+          <h3>Phoenix</h3>
+          <p>web development framework</p>
+          <ul>
+            <li><b>M</b>odel <b>V</b>iew <b>C</b>ontroller</li>
+            <li>Channels (WebSockets)</li>
+            <li>Presence</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Demo</h2>
+          <p>Mix - ExUnit - Ecto - Phoenix</p>
+        </section>
+        <section>
+          <h3>Distillery</h3>
+          <p>creates an Erlang OTP release from an Elixir project</p>
+          <p>
+            self contained release<br />(Erlang Runtime System (ERTS) included)
+          </p>
+          <p>will be part of elixir in the future</p>
+        </section>
+        <section>
+          <h3>Nerves</h3>
+          <p>bulletproof embedded software</p>
+          <blockquote>
+            If a board can run embedded Linux,<br />it likely can run Nerves.
+          </blockquote>
+          <br />
+          <p>
+            <a
+              href="https://www.youtube.com/watch?v=ARQD4BN_5ns"
+              target="_blank"
+            >
+              ElixirConf 2017 - Building an Artificial Pancreas with Elixir and
+              Nerves - Tim Mecklem
+            </a>
+          </p>
+        </section>
+        <section>
+          <h3>...and there is more</h3>
+          <ul>
+            <li>Absinthe: GraphQL Toolkit</li>
+            <li>Flow:<br />parallel computation execution (like Map-Reduce)</li>
+            <li>
+              GenStage:<br />exchanging events between producers and consumers
+              (+ rate limiting)
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h3>Companies using Elixir</h3>
+          <ul>
+            <li>
+              <a href="https://discordapp.com/" target="_blank">Discord</a>
+              (Communication Platform)
+            </li>
+            <li>
+              <a
+                href="https://forzafootball.com/forza-football/"
+                target="_blank"
+                >Forza Football</a
+              >
+              (Mobile App)
+            </li>
+            <li>
+              <a href="https://simplecast.com/" target="_blank">Simplecast</a>
+              (Podcast Publishing/Hosting)
+            </li>
+            <li>
+              <a href="https://weedmaps.com/" target="_blank">Weedmaps</a>
+              (Solutions for the cannabis sector)
+            </li>
+            <li>
+              <a href="https://gameanalytics.com/" target="_blank"
+                >GameAnalytics</a
+              >
+              (Analytics)
+            </li>
+            <li>
+              <a href="https://www.wundermobility.com/" target="_blank"
+                >Wunder</a
+              >
+              (Shared Mobility)
+            </li>
+            <li>
+              <a href="https://bleacherreport.com/" target="_blank"
+                >Bleacher Report</a
+              >
+              (News Site)
+            </li>
+            <li>
+              <a href="https://www.digimondo.de/" target="_blank">digimondo</a>
+              (IoT Services)
+            </li>
+            <li>...</li>
+          </ul>
+        </section>
+        <section>
+          <h3>Next steps</h3>
+          <ul>
+            <li>
+              Online:
+              <a
+                href="https://elixir-lang.org/getting-started/introduction.html"
+                target="_blank"
+                >Getting started Guide</a
+              >
+            </li>
+            <li>
+              Online:
+              <a href="https://elixirschool.com/en/" target="_blank"
+                >Elixir School</a
+              >
+            </li>
+            <li>
+              Book:
+              <a
+                href="https://pragprog.com/book/elixir16/programming-elixir-1-6"
+                target="_blank"
+                >Programming Elixir - Dave Thomas</a
+              >
+            </li>
+            <li>
+              Book:
+              <a
+                href="https://www.manning.com/books/elixir-in-action-second-edition"
+                target="_blank"
+                >Elixir in Action - Saša Jurić</a
+              >
+            </li>
+            <li>
+              YouTube:
+              <a
+                href="https://www.youtube.com/channel/UC0l2QTnO1P2iph-86HHilMQ/videos"
+                target="_blank"
+                >ElixirConf</a
+              >
+            </li>
+            <li>
+              Newsletter:
+              <a href="http://plataformatec.com.br/elixir-radar" target="_blank"
+                >Elixir Radar</a
+              >
+            </li>
+            <li>
+              Podcast:
+              <a href="https://devchat.tv/elixir-mix/" target="_blank"
+                >Elixir Mix</a
+              >
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h1>Questions?</h1>
+          <p>
+            Presentation + Demos:<br /><a
+              href="https://github.com/hlhr/talk_socraos_elixir"
+              target="_blank"
+              >github.com/hlhr/talk_socraos_elixir</a
+            >
+          </p>
+          <p>
+            <br />
+            Blog:
+            <a href="https://randomoutput.xyz" target="_blank"
+              >randomoutput.xyz</a
+            ><br />
+            Contact:
+            <a href="mailto:mail@randomoutput.xyz" target="_blank"
+              >mail@randomoutput.xyz</a
+            >
+          </p>
+        </section>
+      </div>
     </div>
-  </div>
-  <script src="lib/js/head.min.js"></script>
-  <script src="js/reveal.js"></script>
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
 
-  <script>
-    Reveal.initialize({
-      history: true,
-      controls: false,
-      slideNumber: true,
-      slideNumber: "c/t",
-      dependencies: [
-        { src: "plugin/markdown/marked.js" },
-        { src: "plugin/markdown/markdown.js" },
-        { src: "plugin/notes/notes.js", async: true },
-        {
-          src: "plugin/highlight/highlight.js",
-          async: true,
-          callback: function () {
-            hljs.initHighlightingOnLoad();
+    <script>
+      Reveal.initialize({
+        history: true,
+        controls: false,
+        slideNumber: true,
+        slideNumber: "c/t",
+        dependencies: [
+          { src: "plugin/markdown/marked.js" },
+          { src: "plugin/markdown/markdown.js" },
+          { src: "plugin/notes/notes.js", async: true },
+          {
+            src: "plugin/highlight/highlight.js",
+            async: true,
+            callback: function() {
+              hljs.initHighlightingOnLoad();
+            }
           }
-        }
-      ]
-    });
-  </script>
-</body>
-
+        ]
+      });
+    </script>
+  </body>
 </html>
