@@ -1,21 +1,20 @@
 # DemoOtp
 
-**TODO: Add description**
+Start `iex -S mix`
 
-## Installation
-
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `demo_otp` to your list of dependencies in `mix.exs`:
-
-```elixir
-def deps do
-  [
-    {:demo_otp, "~> 0.1.0"}
-  ]
-end
 ```
-
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/demo_otp](https://hexdocs.pm/demo_otp).
-
+iex(1)> DemoOtp.ClickCounterRegistry.create(DemoOtp.ClickCounterRegistry, "google.de")
+:ok
+iex(2)> {:ok, pid} = DemoOtp.ClickCounterRegistry.lookup(DemoOtp.ClickCounterRegistry, "google.de")
+{:ok, #PID<0.137.0>}
+iex(3)> DemoOtp.ClickCounter.get_click_count(pid)
+0
+iex(4)> DemoOtp.ClickCounter.register_click(pid)
+:ok
+iex(5)> DemoOtp.ClickCounter.register_click(pid)
+:ok
+iex(6)> DemoOtp.ClickCounter.register_click(pid)
+:ok
+iex(7)> DemoOtp.ClickCounter.get_click_count(pid)
+3
+```
