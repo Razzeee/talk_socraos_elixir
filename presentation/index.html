@@ -78,12 +78,6 @@
             <b>low-latency</b>, <b>distributed</b> and
             <b>fault-tolerant</b> systems.
           </p>
-          <aside class="notes">
-            <p>
-              Erlang: Ericsson Language
-            </p>
-            <p>BAN Reason: in favor for non-proprietary languages</p>
-          </aside>
         </section>
         <section>
           <h2>Functional programming</h2>
@@ -94,10 +88,20 @@
             <li>...</li>
           </ul>
           <aside class="notes">
-            <p>Monad</p>
-            <p>High Order Functions</p>
-            <p>Currying</p>
-            <p>Isomorphism</p>
+            <ul>
+              <li>Monad</li>
+              <li>High Order Functions</li>
+              <li>Currying</li>
+              <li>Isomorphism</li>
+            </ul>
+            <p>
+              Pattern matching: checking a given sequence of tokens for the
+              presence of some pattern
+            </p>
+            <p>
+              Immutability: state cannot change after construction,
+              transformation
+            </p>
           </aside>
         </section>
         <section>
@@ -109,6 +113,14 @@
             <li>Ericsson, 1986</li>
             <li>Telecom systems / switches</li>
           </ul>
+          <aside class="notes">
+            <p>Erlang: Ericsson Language</p>
+            <ul>
+              <li>Robert Virding</li>
+              <li>Mike Williams</li>
+              <li>Joe Armstrong</li>
+            </ul>
+          </aside>
         </section>
         <section>
           <p>
@@ -143,6 +155,11 @@
               Processes do what they are supposed to do or fail (fail fast)
             </li>
           </ul>
+          <aside class="notes">
+            <p>
+              Erlang Worldview: PhD thesis Joe Armstrong
+            </p>
+          </aside>
         </section>
         <section>
           <blockquote>
@@ -177,13 +194,14 @@
           <aside class="notes">
             <p>
               AXD301: achieve a high availability of nine "9"s / 31.56
-              milliseconds
+              milliseconds a yer
             </p>
             <p>BAN Reason: in favor for non-proprietary languages</p>
             <p>Armstrong got rehired in 2004</p>
           </aside>
         </section>
         <section>
+          <h3>Companies using Erlang</h3>
           <ul>
             <li>
               WhatsApp messaging servers<br />(2 million connected users per
@@ -198,6 +216,7 @@
                 Call of Duty (game server backend)
               </a>
             </li>
+            <li>...</li>
           </ul>
           <aside class="notes">
             <p>WhatsApp: 55 Employees, 19 Milliarden US-Dollar</p>
@@ -305,14 +324,19 @@
           <p>
             project composed of many applications<br />+<br />
             communication via message passing<br />+<br />
-            location transparency<br />(message exchange between different
-            nodes)<br />=<br />
+            location transparency<br />=<br />
             <a
               href="http://blog.plataformatec.com.br/2015/06/elixir-in-times-of-microservices/"
               target="_blank"
               >microservices</a
             >
           </p>
+          <aside class="notes">
+            <p>
+              location transparency: <br />pmessage exchange between different
+              nodes
+            </p>
+          </aside>
         </section>
         <section>
           <h3>...and there is more</h3>
@@ -406,11 +430,19 @@
         </section>
         <section>
           <h3>Distillery</h3>
-          <p>creates an Erlang OTP release from an Elixir project</p>
           <p>
-            self contained release<br />(Erlang Runtime System (ERTS) included)
+            creates an (self contained) Erlang OTP release<br />from an Elixir
+            project
           </p>
           <p>will be part of elixir in the future</p>
+          <aside class="notes">
+            <p>
+              Erlang Runtime System (ERTS) included
+            </p>
+            <p>
+              Elixir Cloud Deployment != Long running processes
+            </p>
+          </aside>
         </section>
         <section>
           <h3>Nerves</h3>
@@ -424,8 +456,9 @@
               href="https://www.youtube.com/watch?v=ARQD4BN_5ns"
               target="_blank"
             >
-              ElixirConf 2017 - Building an Artificial Pancreas with Elixir and
-              Nerves - Tim Mecklem
+              ElixirConf 2017<br />Building an Artificial Pancreas with Elixir
+              and Nerves<br />
+              Tim Mecklem
             </a>
           </p>
           <aside class="notes">
