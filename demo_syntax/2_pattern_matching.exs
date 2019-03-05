@@ -4,18 +4,18 @@
 IO.puts("LIST")
 fancy_list = [:list, "world", "42"]
 IO.inspect(fancy_list)
-[a1, _, c1] = fancy_list
-IO.inspect(a1)
-IO.inspect(c1)
+[type_atom, _, best_number] = fancy_list
+IO.inspect(type_atom)
+IO.inspect(best_number)
 IO.puts("")
 
 # Tuple = any type as value, stored as one in memory
 IO.puts("TUPLES")
 fancy_tuple = {:tuple, "world", "666"}
 IO.inspect(fancy_tuple)
-{a2, _, c2} = fancy_tuple
-IO.inspect(a2)
-IO.inspect(c2)
+{type_atom2, _, number_of_the_beast} = fancy_tuple
+IO.inspect(type_atom2)
+IO.inspect(number_of_the_beast)
 IO.puts("")
 
 # Map = Key-Value structure, any value as key, key is unique
