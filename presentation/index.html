@@ -231,14 +231,7 @@
           <h2>Syntax</h2>
         </section>
         <section>
-          <h2>Demo</h2>
-          <p>
-            <a
-              href="https://github.com/hlhr/talk_socraos_elixir/tree/master/demo_syntax"
-              target="_blank"
-              >demo_syntax</a
-            >
-          </p>
+          <h2>Demo Syntax</h2>
         </section>
         <section>
           <p>Elixir is a <b>dynamically typed</b> language, but...</p>
@@ -286,15 +279,22 @@
           </aside>
         </section>
         <section>
-          <h2>Demo</h2>
+          <h2>Demo OTP</h2>
           <p>GenServer - Agent - Supervisor - Observer</p>
-          <p>
-            <a
-              href="https://github.com/hlhr/talk_socraos_elixir/tree/master/demo_otp"
-              target="_blank"
-              >demo_otp</a
-            >
-          </p>
+          <pre><code class="hljs" data-trim contenteditable>
+            iex(1)> DemoOtp.ClickCounterRegistry. \
+            create(DemoOtp.ClickCounterRegistry, "google.de")
+            :ok
+            iex(2)> {:ok, pid} = DemoOtp.ClickCounterRegistry. \
+            lookup(DemoOtp.ClickCounterRegistry, "google.de")
+            {:ok, #PID<0.137.0>}
+            ...
+            :ok
+            iex(6)> DemoOtp.ClickCounter.register_click(pid)
+            :ok
+            iex(7)> DemoOtp.ClickCounter.get_click_count(pid)
+            3
+        </code></pre>
         </section>
         <section>
           <h3>hot code reloading</h3>
@@ -425,8 +425,7 @@
           </aside>
         </section>
         <section>
-          <h2>Demo</h2>
-          <p>Mix - ExUnit - Ecto - Phoenix</p>
+          <h2>Demo Phoenix</h2>
         </section>
         <section>
           <h3>Distillery</h3>
