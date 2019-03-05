@@ -1,5 +1,6 @@
 # elixir 2_pattern_matching.exs
 
+# List = any type as value, stored as linked lists in memory
 IO.puts("LIST")
 fancy_list = [:list, "world", "42"]
 IO.inspect(fancy_list)
@@ -8,6 +9,7 @@ IO.inspect(a1)
 IO.inspect(c1)
 IO.puts("")
 
+# Tuple = any type as value, stored as one in memory
 IO.puts("TUPLES")
 fancy_tuple = {:tuple, "world", "666"}
 IO.inspect(fancy_tuple)
@@ -16,8 +18,7 @@ IO.inspect(a2)
 IO.inspect(c2)
 IO.puts("")
 
-IO.puts("AnswerChecker")
-
+# Map = Key-Value structure, any value as key, key is unique
 defmodule AnswerChecker do
   def check(42) do
     "correct"
@@ -32,8 +33,10 @@ defmodule AnswerChecker do
   end
 end
 
-# Map = %{}
+IO.puts("AnswerChecker")
 IO.inspect(%{question: 666, answer: AnswerChecker.check(666)})
 IO.inspect(%{question: 41, answer: AnswerChecker.check(41)})
 IO.inspect(%{question: 43, answer: AnswerChecker.check(43)})
 IO.inspect(%{question: 42, answer: AnswerChecker.check(42)})
+
+# keyword list: checkout the guide ;)
